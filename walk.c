@@ -16,3 +16,12 @@ int createWalk(Walk *w) {
     
     return 1;
 }
+
+void readWalk(Walk w) {
+    printf("\n날짜 - %s\n장소 - %s\n산책시간 - %d분\n날씨 - ", w.day, w.place, w.time);
+    if(w.weather == 1) printf("맑음");
+    else if(w.weather == 2) printf("흐림");
+    else if(w.weather == 3) printf("비");
+    else if(w.weather == 4) printf("눈");
+    printf("\n");
+}
