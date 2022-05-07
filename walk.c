@@ -3,39 +3,39 @@
 #include "walk.h"
 
 int createWalk(Walk *w) {
-    printf("»êÃ¥ÇÑ ³¯Â¥´Â? (¿ù/ÀÏ)\n");
+    printf("ì‚°ì±…í•œ ë‚ ì§œëŠ”? (ì›”/ì¼)\n");
     getchar();
     scanf("%[^\n]s", w->day);
-    printf("»êÃ¥ÇÑ Àå¼Ò´Â?\n");
+    printf("ì‚°ì±…í•œ ì¥ì†ŒëŠ”?\n");
     getchar();
     scanf("%[^\n]s", w->place);
-    printf("»êÃ¥ÇÑ ½Ã°£Àº? (ºĞ)\n");
+    printf("ì‚°ì±…í•œ ì‹œê°„ì€? (ë¶„)\n");
     scanf("%d", &w->time);
-    printf("³¯¾¾´Â? (1:¸¼À½ 2:Èå¸² 3:ºñ 4:´«)\n");
+    printf("ë‚ ì”¨ëŠ”? (1:ë§‘ìŒ 2:íë¦¼ 3:ë¹„ 4:ëˆˆ)\n");
     scanf("%d", &w->weather);
     
     return 1;
 }
 
 void readWalk(Walk w) {
-    printf("\n³¯Â¥ - %s\nÀå¼Ò - %s\n»êÃ¥½Ã°£ - %dºĞ\n³¯¾¾ - ", w.day, w.place, w.time);
-    if(w.weather == 1) printf("¸¼À½");
-    else if(w.weather == 2) printf("Èå¸²");
-    else if(w.weather == 3) printf("ºñ");
-    else if(w.weather == 4) printf("´«");
+    printf("\në‚ ì§œ - %s\nì¥ì†Œ - %s\nì‚°ì±…ì‹œê°„ - %dë¶„\në‚ ì”¨ - ", w.day, w.place, w.time);
+    if(w.weather == 1) printf("ë§‘ìŒ");
+    else if(w.weather == 2) printf("íë¦¼");
+    else if(w.weather == 3) printf("ë¹„");
+    else if(w.weather == 4) printf("ëˆˆ");
     printf("\n");
 }
 
 int updateWalk(Walk *w) {
-    printf("»êÃ¥ÇÑ ³¯Â¥´Â? (¿ù/ÀÏ)\n");
+    printf("ì‚°ì±…í•œ ë‚ ì§œëŠ”? (ì›”/ì¼)\n");
     getchar();
     scanf("%[^\n]s", w->day);
-    printf("»êÃ¥ÇÑ Àå¼Ò´Â?\n");
+    printf("ì‚°ì±…í•œ ì¥ì†ŒëŠ”?\n");
     getchar();
     scanf("%[^\n]s", w->place);
-    printf("»êÃ¥ÇÑ ½Ã°£Àº? (ºĞ)\n");
+    printf("ì‚°ì±…í•œ ì‹œê°„ì€? (ë¶„)\n");
     scanf("%d", &w->time);
-    printf("³¯¾¾´Â? (1:¸¼À½ 2:Èå¸² 3:ºñ 4:´«)\n");
+    printf("ë‚ ì”¨ëŠ”? (1:ë§‘ìŒ 2:íë¦¼ 3:ë¹„ 4:ëˆˆ)\n");
     scanf("%d", &w->weather);
     
     return 1;
