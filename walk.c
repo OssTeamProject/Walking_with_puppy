@@ -40,3 +40,8 @@ int updateWalk(Walk *w) {
     
     return 1;
 }
+
+int deleteWalk(Walk *w) {
+    w->time = -1;
+    return 1;
+}
