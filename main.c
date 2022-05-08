@@ -7,7 +7,6 @@ int main(void){
     int index = 0;
     int count = 0, menu;
 
-    count = loadData(list);
     index = count;
  
     while (1){
