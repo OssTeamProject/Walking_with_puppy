@@ -17,6 +17,7 @@ int main(void){
             if(count > 0) {
                 listWalk(list, index);
             }
+            else printf("ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤!");
         }
         else if (menu == 2){
             count += createWalk(&list[index++]);
@@ -25,7 +26,7 @@ int main(void){
         else if (menu == 3){
             int no = selectDataNo(list, index);
             if(no == 0){
-                printf("=> Ãë¼ÒµÊ!\n");
+                printf("=> ì·¨ì†Œë¨!\n");
                 continue;
             }
             updateWalk(&list[no-1]);
@@ -33,21 +34,21 @@ int main(void){
         else if (menu == 4){
             int no = selectDataNo(list, index);
             if(no == 0){
-                printf("=> Ãë¼ÒµÊ!\n");
+                printf("=> ì·¨ì†Œë¨!\n");
                 continue;
             }
             int deleteok;
-            printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?(»èÁ¦ : 1)");
+            printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì‚­ì œ : 1)");
             scanf("%d", &deleteok);
             if(deleteok == 1) {
                 if(deleteWalk(&list[no-1])) {
                     count--;
-                    printf("=> »èÁ¦µÊ!\n");
+                    printf("=> ì‚­ì œë¨!\n");
                 }
             }
         }
         
     }
-    printf("Á¾·áµÊ!\n");
+    printf("ì¢…ë£Œë¨!\n");
     return 0;
 }
