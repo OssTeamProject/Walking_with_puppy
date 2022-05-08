@@ -2,6 +2,20 @@
 #include <string.h>
 #include "walk.h"
 
+int selectMenu(){
+    int menu;
+    printf("\n***********\n");
+    printf("1. 일지조회\n");
+    printf("2. 일지추가\n");
+    printf("3. 일지수정\n");
+    printf("4. 일지삭제\n");    
+    printf("0. 종료\n");
+    printf("***********\n\n");
+    printf("=> 원하는 메뉴는? ");
+    scanf("%d", &menu);
+    return menu;
+}
+
 void listWalk(Walk *w, int count) {
     printf("\n================================\n");
     for(int i=0 ; i<count ; i++) {
