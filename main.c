@@ -17,7 +17,7 @@ int main(void){
             if(count > 0) {
                 listWalk(list, index);
             }
-            else printf("데이터가 없습니다!");
+            else printf("\n데이터가 없습니다!\n");
         }
         else if (menu == 2){
             count += createWalk(&list[index++]);
