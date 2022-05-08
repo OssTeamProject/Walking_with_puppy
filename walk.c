@@ -2,6 +2,24 @@
 #include <string.h>
 #include "walk.h"
 
+void listWalk(Walk *w, int count) {
+    printf("\n================================\n");
+    for(int i=0 ; i<count ; i++) {
+        if(w[i].time == -1) continue;
+        printf("(%d)\n", i+1);
+        readWalk(w[i]);
+        printf("================================\n");
+    }
+}
+
+int selectDataNo(Walk *w, int count) {
+    int no;
+    listWalk(w, count);
+    printf("번호는 (취소 : 0)? ");
+    scanf("%d", &no);
+    return no;
+}
+
 int createWalk(Walk *w) {
     printf("산책한 날짜는? (월/일)\n");
     getchar();
