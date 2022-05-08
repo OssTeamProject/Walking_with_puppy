@@ -18,5 +18,5 @@
 <br>
 <h4> 🛠 개발환경 및 언어 : 🅲</h4> 
 <h4>🌞 팀소개 및 팀원이 맡은 역할 <br></h4>
-<h5> 👩🏻‍💻 김하은 (chamroro) - CRUD, 다중데이터기능, WIKI 페이지 작성<br>
-👩🏻‍💻 이하경 (22000593lee) - 데이터파일저장 및 검색기능, README.md 파일 작성</h5>
+<h5> 👩🏻‍💻 김하은 (chamroro) - Create, Read, 다중데이터기능, WIKI 페이지 작성<br>
+👩🏻‍💻 이하경 (22000593lee) - Update, Delete, 데이터파일저장 및 검색기능, README.md 파일 작성</h5>
