@@ -21,3 +21,15 @@ int loadData(Walk *w) {
     printf("=> 로딩 성공!\n");
     return i;
 }
+
+void saveData(Walk *w, int count) {
+    FILE *fp;
+    fp = fopen("walk.txt", "wt");
+    for(int i=0 ; i<count-1 ; i++) {
+        if(w[i].time == -1) continue;
+        fprintf(fp, "%s %d %d %s\n", w[i].day, w[i].time, w[i].weather, w[i].place);
+    }
+    fprintf(fp, "%s %d %d %s", w[count-1].day, w[count-1].time, w[count-1].weather, w[count-1].place);
+    fclose(fp);
+    printf("=> 저장됨!\n");
+}
