@@ -33,3 +33,25 @@ void saveData(Walk *w, int count) {
     fclose(fp);
     printf("=> 저장됨!\n");
 }
+
+void searchPlace(Walk *w, int count) {
+    int scnt = 0;
+    char search[20];
+
+    printf("검색할 장소? \n");
+    getchar();
+    scanf("%[^\n]s", search);
+
+    printf("\n================================\n");
+    for(int i=0 ; i<count ; i++) {
+        if(w[i].time == -1) continue;
+        if(strstr(w[i].place, search)) {
+            printf("(%d)", i+1);
+            readWalk(w[i]);
+            scnt++;
+            printf("================================\n");
+        }
+    }
+    if(scnt == 0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
+}
