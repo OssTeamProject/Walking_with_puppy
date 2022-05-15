@@ -55,3 +55,24 @@ void searchPlace(Walk *w, int count) {
     if(scnt == 0) printf("=> 검색된 데이터 없음!");
     printf("\n");
 }
+
+void searchWeather(Walk *w, int count) {
+    int scnt = 0;
+    int type;
+    
+    printf("검색할 날씨? (1:맑음 2:흐림 3:비 4:눈)\n");
+    scanf("%d", &type);
+
+    printf("\n================================\n");
+    for(int i=0 ; i<count ; i++) {
+        if(w[i].time == -1) continue;
+        if(type == w[i].weather) {
+            printf("(%d)", i+1);
+            readWalk(w[i]);
+            scnt++;
+            printf("================================\n");
+        }
+    }
+    if(scnt == 0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
+}
