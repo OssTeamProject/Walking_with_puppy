@@ -4,16 +4,18 @@
 #include <stdio.h>
 
 typedef struct {
-    char day[20]; // »êÃ¥ÇÑ ³¯Â¥
-    char place[30]; // »êÃ¥Àå¼Ò
-    int time; // »êÃ¥ÇÑ ½Ã°£
-    int weather; // ³¯¾¾(1:¸¼À½ 2:Èå¸² 3:ºñ 4:´«)
+    char day[20]; // ì‚°ì±…í•œ ë‚ ì§œ
+    char place[30]; // ì‚°ì±…ì¥ì†Œ
+    int time; // ì‚°ì±…í•œ ì‹œê°„
+    int weather; // ë‚ ì”¨(1:ë§‘ìŒ 2:íë¦¼ 3:ë¹„ 4:ëˆˆ)
 }Walk;
 
-int selectMenu(); // ¸Ş´º ¼±ÅÃ
-int createWalk(Walk *w); // »êÃ¥ÀÏÁö Ãß°¡
-void readWalk(Walk w); // ÇÏ³ªÀÇ ÀÏÁö Ãâ·Â
-int updateWalk(Walk *w); // »êÃ¥ÀÏÁö ¼öÁ¤
-int deleteWalk(Walk *w); // »êÃ¥ÀÏÁö »èÁ¦
+int selectMenu(); // ë©”ë‰´ ì„ íƒ
+int createWalk(Walk *w); // ì‚°ì±…ì¼ì§€ ì¶”ê°€
+void readWalk(Walk w); // í•˜ë‚˜ì˜ ì¼ì§€ ì¶œë ¥
+int updateWalk(Walk *w); // ì‚°ì±…ì¼ì§€ ìˆ˜ì •
+int deleteWalk(Walk *w); // ì‚°ì±…ì¼ì§€ ì‚­ì œ
+void listWalk(Walk *w, int count); // ì „ì²´ ë“±ë¡ëœ ì‚°ì±…ì¼ì§€ì˜ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
+int selectDataNo(Walk *w, int count); //ì„ íƒëœ ì‚°ì±…ì¼ì§€ì˜ ë²ˆí˜¸ ì¶œë ¥
 
 #endif
