@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include "walk.h"
+#include "log.h"
 
 int main(void){
     Walk list[100];
     int index = 0;
     int count = 0, menu;
-
+    count = loadData(list);
     index = count;
  
     while (1){
@@ -45,6 +46,18 @@ int main(void){
                     printf("=> 삭제됨!\n");
                 }
             }
+        }
+        else if (menu == 5){
+            saveData(list, index);
+        }
+        else if (menu == 6){
+            searchPlace(list, index);
+        }
+        else if (menu == 7){
+            searchTime(list, index);
+        }
+        else if (menu == 8){
+            searchWeather(list, index);
         }
         
     }
