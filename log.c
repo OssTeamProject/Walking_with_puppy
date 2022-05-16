@@ -76,3 +76,27 @@ void searchWeather(Walk *w, int count) {
     if(scnt == 0) printf("=> 검색된 데이터 없음!");
     printf("\n");
 }
+
+void searchTime(Walk *w, int count) {
+    int scnt = 0;
+    int max;
+    int min;
+    
+    printf("최대 시간은? (분)\n");
+    scanf("%d", &max);
+    printf("최소 시간은? (분)\n");
+    scanf("%d", &min);
+
+    printf("\n================================\n");
+    for(int i=0 ; i<count ; i++) {
+        if(w[i].time == -1) continue;
+        if(w[i].time >= min && w[i].time <= max) {
+            printf("(%d)", i+1);
+            readWalk(w[i]);
+            scnt++;
+            printf("================================\n");
+        }
+    }
+    if(scnt == 0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
+}
