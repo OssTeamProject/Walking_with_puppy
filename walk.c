@@ -4,13 +4,17 @@
 
 int selectMenu(){
     int menu;
-    printf("\n***********\n");
-    printf("1. 일지조회\n");
-    printf("2. 일지추가\n");
-    printf("3. 일지수정\n");
-    printf("4. 일지삭제\n");    
-    printf("0. 종료\n");
-    printf("***********\n\n");
+    printf("\n***************\n");
+    printf("1. 기록 조회\n");
+    printf("2. 기록 추가\n");
+    printf("3. 기록 수정\n");
+    printf("4. 기록 삭제\n");
+    printf("5. 기록 저장\n");
+    printf("6. 장소 검색\n");
+    printf("7. 시간 검색\n");
+    printf("8. 날씨 검색\n");
+    printf("0. 프로그램종료\n");
+    printf("***************\n\n");
     printf("=> 원하는 메뉴는? ");
     scanf("%d", &menu);
     return menu;
