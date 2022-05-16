@@ -7,7 +7,7 @@ int main(void){
     Walk list[100];
     int index = 0;
     int count = 0, menu;
-
+    count = loadData(list);
     index = count;
  
     while (1){
